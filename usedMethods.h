@@ -1,0 +1,16 @@
+int symbolCheck(char *str);
+int isImmediateAdd(char *str , int *n);
+int checkRegister(char *str, register_names *rname, int *index);
+int isRandAdd(char *str , int *n ,int *numOfStar );
+int checkLabelName(char *str, int len);
+int isVirtual(char *str, unsigned char *type);
+int isEntry(char *str);
+int isExtern(char *str);
+int isCommand(char *str, int *index, cmd_names *commands);
+void makeEntryFile(char *name, entries_struct *e_table , int counter );
+void makeExternalFile(char *name, externals_struct *ex_table, int counter);
+void makeObjFile(char *name,obj_struct *o_table,long *memory ,int i_count ,int d_count );
+void convert(unsigned n, char *str);
+void printHeader(char *name,int i_count ,int d_count, FILE *file);
+void printInstructions(obj_struct *o_table ,int i_count , FILE *file);
+void printData(long *memory ,int i_count ,int d_count , FILE *file);
